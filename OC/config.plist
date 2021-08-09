@@ -1077,21 +1077,21 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02703108GUJG361M</string>
+			<string>You MLB</string>
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>ROM</key>
-			<data>4x/P15aa</data>
+			<data>uCsE15aa</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemMemoryStatus</key>
 			<string>Auto</string>
 			<key>SystemProductName</key>
-			<string>iMacPro1,1</string>
+			<string>You SystemProductName</string>
 			<key>SystemSerialNumber</key>
-			<string>C02T42YHHX87</string>
+			<string>You Serial</string>
 			<key>SystemUUID</key>
-			<string>28293EB1-19F7-4E26-A7DA-34D42E352C6E</string>
+			<string> You SystemUUID</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
