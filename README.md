@@ -3,4 +3,4 @@ OpecCore0.7.2
 
 使用时需在config中更改自己生成的机型信息
 
-独显硬解需要将机型改为iMacPro1,1
+独显硬解需要将机型改为iMacPro7,1
