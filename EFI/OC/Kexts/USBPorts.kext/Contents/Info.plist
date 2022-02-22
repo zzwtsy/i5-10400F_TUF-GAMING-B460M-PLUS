@@ -22,7 +22,7 @@
 	<string>1.0</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>iMac20,1-XHC</key>
+		<key>MacPro7,1-XHC</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.apple.driver.AppleUSBMergeNub</string>
@@ -35,27 +35,25 @@
 			<key>IOProbeScore</key>
 			<integer>5000</integer>
 			<key>IOProviderClass</key>
-			<string>AppleUSBXHCISPT</string>
+			<string>AppleUSBXHCIPCI</string>
 			<key>IOProviderMergeProperties</key>
 			<dict>
 				<key>kUSBSleepPortCurrentLimit</key>
 				<integer>2100</integer>
 				<key>kUSBSleepPowerSupply</key>
-				<integer>5100</integer>
+				<integer>4700</integer>
 				<key>kUSBWakePortCurrentLimit</key>
 				<integer>2100</integer>
 				<key>kUSBWakePowerSupply</key>
-				<integer>5100</integer>
+				<integer>4700</integer>
 				<key>port-count</key>
 				<data>
-				FgAAAA==
+				FQAAAA==
 				</data>
 				<key>ports</key>
 				<dict>
 					<key>HS01</key>
 					<dict>
-						<key>Comment</key>
-						<string>2.0 Front 1</string>
 						<key>UsbConnector</key>
 						<integer>0</integer>
 						<key>name</key>
@@ -65,10 +63,19 @@
 						AQAAAA==
 						</data>
 					</dict>
+					<key>HS02</key>
+					<dict>
+						<key>UsbConnector</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>HS02</string>
+						<key>port</key>
+						<data>
+						AgAAAA==
+						</data>
+					</dict>
 					<key>HS03</key>
 					<dict>
-						<key>Comment</key>
-						<string>2.0 Mid Back 2</string>
 						<key>UsbConnector</key>
 						<integer>0</integer>
 						<key>name</key>
@@ -80,8 +87,6 @@
 					</dict>
 					<key>HS04</key>
 					<dict>
-						<key>Comment</key>
-						<string>2.0 Mid Back 1</string>
 						<key>UsbConnector</key>
 						<integer>0</integer>
 						<key>name</key>
@@ -93,8 +98,6 @@
 					</dict>
 					<key>HS05</key>
 					<dict>
-						<key>Comment</key>
-						<string>2.0 Top Back 2</string>
 						<key>UsbConnector</key>
 						<integer>0</integer>
 						<key>name</key>
@@ -106,86 +109,50 @@
 					</dict>
 					<key>HS06</key>
 					<dict>
-						<key>Comment</key>
-						<string>2.0 Top Back 1</string>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>255</integer>
 						<key>name</key>
 						<string>HS06</string>
 						<key>port</key>
 						<data>
-						BgAAAA==
+						CAAAAA==
 						</data>
 					</dict>
 					<key>HS07</key>
 					<dict>
-						<key>Comment</key>
-						<string>2.0 Bot Back 2</string>
 						<key>UsbConnector</key>
 						<integer>0</integer>
 						<key>name</key>
 						<string>HS07</string>
 						<key>port</key>
 						<data>
-						BwAAAA==
+						CQAAAA==
 						</data>
 					</dict>
 					<key>HS08</key>
 					<dict>
-						<key>Comment</key>
-						<string>2.0 Bot Back 1</string>
 						<key>UsbConnector</key>
 						<integer>0</integer>
 						<key>name</key>
 						<string>HS08</string>
 						<key>port</key>
 						<data>
-						CAAAAA==
+						CgAAAA==
 						</data>
 					</dict>
 					<key>HS09</key>
 					<dict>
-						<key>Comment</key>
-						<string>2.0 Front 2</string>
 						<key>UsbConnector</key>
-						<integer>0</integer>
+						<integer>255</integer>
 						<key>name</key>
 						<string>HS09</string>
 						<key>port</key>
 						<data>
-						CQAAAA==
-						</data>
-					</dict>
-					<key>HS10</key>
-					<dict>
-						<key>Comment</key>
-						<string>2.0 Front 3</string>
-						<key>UsbConnector</key>
-						<integer>0</integer>
-						<key>name</key>
-						<string>HS10</string>
-						<key>port</key>
-						<data>
-						CgAAAA==
-						</data>
-					</dict>
-					<key>HS12</key>
-					<dict>
-						<key>Comment</key>
-						<string>Bluetooth</string>
-						<key>UsbConnector</key>
-						<integer>255</integer>
-						<key>name</key>
-						<string>HS12</string>
-						<key>port</key>
-						<data>
-						DAAAAA==
+						CwAAAA==
 						</data>
 					</dict>
 					<key>SS01</key>
 					<dict>
-						<key>Comment</key>
-						<string>3.0 Front 1</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>name</key>
@@ -195,10 +162,19 @@
 						EQAAAA==
 						</data>
 					</dict>
+					<key>SS02</key>
+					<dict>
+						<key>UsbConnector</key>
+						<integer>3</integer>
+						<key>name</key>
+						<string>SS02</string>
+						<key>port</key>
+						<data>
+						EgAAAA==
+						</data>
+					</dict>
 					<key>SS03</key>
 					<dict>
-						<key>Comment</key>
-						<string>3.0 Mid Back 2</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>name</key>
@@ -210,8 +186,6 @@
 					</dict>
 					<key>SS04</key>
 					<dict>
-						<key>Comment</key>
-						<string>3.0 Mid Back 1</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>name</key>
@@ -223,8 +197,6 @@
 					</dict>
 					<key>SS05</key>
 					<dict>
-						<key>Comment</key>
-						<string>3.0 Top Back 2</string>
 						<key>UsbConnector</key>
 						<integer>3</integer>
 						<key>name</key>
@@ -234,23 +206,10 @@
 						FQAAAA==
 						</data>
 					</dict>
-					<key>SS06</key>
-					<dict>
-						<key>Comment</key>
-						<string>3.0 Top Back 1</string>
-						<key>UsbConnector</key>
-						<integer>3</integer>
-						<key>name</key>
-						<string>SS06</string>
-						<key>port</key>
-						<data>
-						FgAAAA==
-						</data>
-					</dict>
 				</dict>
 			</dict>
 			<key>model</key>
-			<string>iMac20,1</string>
+			<string>MacPro7,1</string>
 		</dict>
 	</dict>
 	<key>OSBundleRequired</key>
