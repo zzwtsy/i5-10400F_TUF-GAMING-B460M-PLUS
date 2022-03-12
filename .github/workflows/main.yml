@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     tags:
-      - 'v*.*.*'
+      - 'ReleaseTag'
 
 jobs:
   build:
@@ -21,16 +21,16 @@ jobs:
     - name: Generate release tag
       id: tag
       run: |
-        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
+        echo "::set-output name=release_tag::$(cat ReleaseTag)"
         touch release.txt
-        echo "${tag}" >> release.txt
+        echo "$(date +"%Y.%m.%d-%H%M")" >> release.txt
 
     - name: 上传release
       uses: softprops/action-gh-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${tag}
+        name: ${{ steps.tag.outputs.release_tag }}
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: |
