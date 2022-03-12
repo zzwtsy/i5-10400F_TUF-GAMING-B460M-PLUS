@@ -18,6 +18,13 @@ jobs:
       run: |
         zip -q -r Opencore.zip ./EFI
 
+    - name: Generate release tag
+        id: tag
+        run: |
+          echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
+          touch release.txt
+          echo "${tag}" >> release.txt
+
     - name: 上传release
       uses: softprops/action-gh-release@v1
       env:
@@ -25,6 +32,6 @@ jobs:
       with:
         name: ${tag}
         tag_name: ${{ steps.tag.outputs.release_tag }}
-        body_path: 
+        body_path: release.txt
         files: |
           ./*.zip
