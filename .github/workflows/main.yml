@@ -10,8 +10,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04
-
     steps:
+    - name: Checkout codebase
+      uses: actions/checkout@v2
+    
     - name: 打包 EFI
       run: |
       zip -q -r Opencore.zip ./EFI
