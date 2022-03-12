@@ -19,11 +19,11 @@ jobs:
         zip -q -r Opencore.zip ./EFI
 
     - name: Generate release tag
-        id: tag
-        run: |
-          echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
-          touch release.txt
-          echo "${tag}" >> release.txt
+      id: tag
+      run: |
+        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
+        touch release.txt
+        echo "${tag}" >> release.txt
 
     - name: 上传release
       uses: softprops/action-gh-release@v1
