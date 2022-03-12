@@ -1,11 +1,10 @@
 name: Upload Opencore to release
 
 on:
-  repository_dispatch:
-  workflow_dispatch:
   push:
     tags:
       - 'ReleaseTag'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -30,8 +29,14 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: ${{ steps.tag.outputs.release_tag }}
+        name: Opencore${{ steps.tag.outputs.release_tag }}
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: |
           ./*.zip
+
+    - name: Delete workflow runs
+      uses: GitRML/delete-workflow-runs@main
+      with:
+        retain_days: 1
+        keep_minimum_runs: 3
