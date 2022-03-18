@@ -23,13 +23,14 @@ jobs:
         echo "::set-output name=release_tag::$(cat ReleaseTag)"
         touch release.txt
         echo "$(date +"%Y.%m.%d-%H%M")" >> release.txt
+        echo "$(cat OpenCoreReleas)" >> release.txt
 
     - name: Upload EFI to release
       uses: softprops/action-gh-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: OpenCore${{ steps.tag.outputs.release_tag }}
+        name: ${{ steps.tag.outputs.release_tag }}
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: |
