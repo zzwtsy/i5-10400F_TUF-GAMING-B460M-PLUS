@@ -1,6 +1,8 @@
 # i5-10400F_TUF-GAMING-B460M-PLUS. 
 - OpenCore 0.7.9  (2022-03-9)
 - OpenCore 0.7.8  (2022-02-14)
+## 已知问题  
+- usb3.0无法驱动
 ## 机器配置
 - OS：Monterey
 - CPU: i5 10400F  
