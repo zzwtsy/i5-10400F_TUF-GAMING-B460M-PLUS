@@ -36,8 +36,10 @@ jobs:
         files: |
           ./*.zip
 
-    - name: Delete workflow runs
-      uses: GitRML/delete-workflow-runs@main
+    - name: Delete old workflow runs
+      uses: MajorScruffy/delete-old-workflow-runs@v0.1.0
       with:
-        retain_days: 1
-        keep_minimum_runs: 3
+        workflow: ".github/workflows/main.yml"
+        maximum-workflow-runs-to-keep: 3
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
