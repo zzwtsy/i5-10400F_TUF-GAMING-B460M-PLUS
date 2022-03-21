@@ -39,6 +39,7 @@ jobs:
     - name: Delete old workflow runs
       uses: MajorScruffy/delete-old-workflow-runs@v0.1.0
       with:
+        repository: zzwtsy/i5-10400F_TUF-GAMING-B460M-PLUS
         workflow: ".github/workflows/main.yml"
         maximum-workflow-runs-to-keep: 3
       env:
