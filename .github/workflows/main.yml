@@ -36,11 +36,10 @@ jobs:
         files: |
           ./*.zip
 
-    - name: Delete old workflow runs
-      uses: MajorScruffy/delete-old-workflow-runs@v0.1.0
-      with:
-        repository: zzwtsy/i5-10400F_TUF-GAMING-B460M-PLUS
-        workflow: ".github/workflows/main.yml"
-        maximum-workflow-runs-to-keep: 3
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Delete workflow runs
+        uses: mwigginsdev/delete-oldest-workflow-runs@main
+        with:
+          token: ${{ secrets.AUTH_PAT }}
+          repository: ${{ github.repository }}
+          keep_minimum_runs: 3
+          workflow_name: ${{ github.event.inputs.workflowName }}
