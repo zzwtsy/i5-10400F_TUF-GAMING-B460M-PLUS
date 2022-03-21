@@ -36,10 +36,5 @@ jobs:
         files: |
           ./*.zip
 
-    - name: Delete workflow runs
-      uses: GitRML/delete-workflow-runs@main
-      with:
-        retain_days: 1
-        keep_minimum_runs: 3
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Clean up previous workflow runs
+      uses: egmacke/action-cleanup-workflow-runs@v1.2
