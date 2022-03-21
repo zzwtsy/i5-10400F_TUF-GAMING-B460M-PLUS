@@ -37,9 +37,7 @@ jobs:
           ./*.zip
 
     - name: Delete workflow runs
-      uses: mwigginsdev/delete-oldest-workflow-runs@v1
+      uses: ActionsRML/delete-workflow-runs@main
       with:
-        token: ${{ secrets.AUTH_PAT }}
-        repository: ${{ github.repository }}
+        retain_days: 1
         keep_minimum_runs: 3
-        workflow_name: ${{ github.event.inputs.workflowName }}
