@@ -36,8 +36,10 @@ jobs:
         files: |
           ./*.zip
 
-    - name: Clean up previous workflow runs
-      uses: kolpav/purge-artifacts-action@v1
+    - name: Delete workflow runs
+      uses: GitRML/delete-workflow-runs@main
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        expire-in: 1days
+        repository: ${{ github.repository }}
+        retain_days: 1
+        keep_minimum_runs: 3
