@@ -1,4 +1,4 @@
-name: Upload Opencore to release
+name: Upload OpenCore to Release
 
 on:
   push:
