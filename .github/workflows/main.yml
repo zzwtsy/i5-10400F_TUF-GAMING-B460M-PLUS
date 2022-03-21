@@ -37,4 +37,7 @@ jobs:
           ./*.zip
 
     - name: Clean up previous workflow runs
-      uses: egmacke/action-cleanup-workflow-runs@v1.2
+      uses: kolpav/purge-artifacts-action@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        expire-in: 1days
