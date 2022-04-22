@@ -3,7 +3,7 @@ name: Upload OpenCore to Release
 on:
   push:
     tags:
-      - 'ReleaseTag'
+      - '1.*'
   workflow_dispatch:
 
 jobs:
