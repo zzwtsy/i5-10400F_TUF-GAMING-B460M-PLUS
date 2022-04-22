@@ -15,7 +15,7 @@ jobs:
     
     - name: Packaging EFI
       run: |
-        zip -q -r Opencore.zip ./EFI
+        zip -q -r OpenCore.zip ./EFI
 
     - name: Generate release tag
       id: tag
