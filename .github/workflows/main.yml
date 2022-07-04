@@ -1,0 +1,44 @@
+name: Upload OpenCore to Release
+
+on:
+  push:
+    tags:
+      - 'v*.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout codebase
+      uses: actions/checkout@v2
+    
+    - name: Packaging EFI
+      run: |
+        zip -q -r OpenCore.zip ./EFI
+
+    - name: Generate release tag
+      id: tag
+      run: |
+        echo "::set-output name=release_tag::$(cat ReleaseTag)"
+        touch release.txt
+        echo "$(date +"%Y.%m.%d-%H%M")" >> release.txt
+        echo "$(cat OpenCoreRelease)" >> release.txt
+
+    - name: Upload EFI to release
+      uses: softprops/action-gh-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        name: ${{ steps.tag.outputs.release_tag }}
+        tag_name: ${{ steps.tag.outputs.release_tag }}
+        body_path: release.txt
+        files: |
+          ./*.zip
+          
+    - name: Delete workflow runs
+      uses: GitRML/delete-workflow-runs@main
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        repository: ${{ github.repository }}
+        retain_days: 1
+        keep_minimum_runs: 2
