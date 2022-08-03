@@ -1,8 +1,4 @@
 # i5-10400F_TUF-GAMING-B460M-PLUS. 
-- OpenCore 更新至 0.8.2  (2022-07-18)
-- OpenCore 更新至 0.8.1  (2022-06-21)
-- OpenCore 更新至 0.7.9  (2022-03-9)
-- OpenCore 更新至 0.7.8  (2022-02-14)
 ## 已知问题  
 - ~usb3.0无法驱动~
 - ~RTC 写入错误 [解决方法](https://dortania.github.io/OpenCore-Post-Install/misc/rtc.html)~
