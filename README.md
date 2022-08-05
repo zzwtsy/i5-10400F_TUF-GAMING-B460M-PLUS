@@ -2,6 +2,7 @@
 ## 已知问题  
 - ~usb3.0无法驱动~
 - ~RTC 写入错误 [解决方法](https://dortania.github.io/OpenCore-Post-Install/misc/rtc.html)~
+- 睡眠唤醒
 ## 机器配置
 - OS：Monterey
 - CPU: i5 10400F  
