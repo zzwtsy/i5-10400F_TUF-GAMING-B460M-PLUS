@@ -1,2 +1,4 @@
 *.DS_Store
 EFI/OC/oldConfig.plist
+EFI/OC/Drivers/*2.efi
+EFI/BOOT/*2.efi
