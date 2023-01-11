@@ -20,27 +20,23 @@
 
   - DarkWake 唤醒 （[来源](https://www.logcg.com/archives/3528.html)）
 
-    <details>
+      - 终端查看是否有 DarkWake 唤醒
 
-        - 终端查看是否有 DarkWake 唤醒
+        ```bash
+        $ pmset -g log | grep DarkWake
+        ```
 
-          ```bash
-          $ pmset -g log | grep DarkWake
-          ```
+      - 检查 powernap 是否为 0
 
-        - 检查 powernap 是否为 0
+        ```bash
+        $ pmset -g
+        ```
 
-          ```bash
-          $ pmset -g
-          ```
+      - 关闭 PowerNap
 
-        - 关闭 PowerNap
-
-          ```bash
-          $ sudo pmset -a powernap 0
-          ```
-
-    </details>
+        ```bash
+        $ sudo pmset -a powernap 0
+        ```
 
   </details>
 
