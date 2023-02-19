@@ -1,5 +1,4 @@
-- OpenCore 0.8.8
+- OpenCore 0.8.9
 - Update kext
-  - Lilu 1.62 to 1.63
-  - WhateverGreen 1.62 to 1.63
-  - AppleALC 1.77 to 1.78
+  - WhateverGreen 1.63 to 1.64
+  - AppleALC 1.78 to 1.79
